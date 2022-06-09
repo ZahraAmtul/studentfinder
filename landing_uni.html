@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/ld_uni.css">
+    <title>Student Finder</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <div class="row mt-5 ">
+            <div class="col-md-6 c-1">
+                <h1>The best learning happens <br> outside the classroom.</h1>
+                <p class="mt-3">We provide MBA/MSc students with great live business projects <br> to work on over the
+                    summer. Each client
+                    project is vetted and <br> structured by Prof. Joe O'Mahoney - a Professor of Consultancy <br> and
+                    an expert
+                    in consulting projects.</p>
+                <button class="btn mt-4">Sign Up</button>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/landing_uni.png" alt="">
+            </div>
+
+        </div>
+        <div class="row mt-5 ">
+
+            <div class="col-md-6">
+                <img src="assets/increasing.png" alt="">
+            </div>
+            <div class="col-md-6 mt-5">
+                <h1>Outstanding Projects!</h1>
+                <p class="mt-3">Students are increasingly demanding outstanding projects to finish <br> their business and IT
+                    courses. If you struggle to find excellent projects <br> tailored to your student needs, we can save you
+                    time, <br> money and worry.</p>
+
+            </div>
+        </div>
+        <div class="container-fluid mt-5 c-b">
+            <p>We have outstanding relationships with businesses in every sector, of ever size and in every service.
+                If your student wants a people project in a start-up - we can source it. If they want a digital
+                transformation project in banking - we know just the right firm.</p>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 mx-5 c-ch">
+                <h1>Don't Leave it to Chance!!!</h1>
+            </div>
+            <div class="col-md-4 ">
+                <img src="assets/business.png" alt="">
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 joe">
+                <img src="assets/joe.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="form-holder">
+                            <div class="form-content">
+                                <div class="form-items">
+                                    <h3>Contact with Joe</h3>
+                                    <p>Fill in the data below.</p>
+                                    <form class="requires-validation" novalidate>
+
+                                        <div class="col-md-12">
+                                            <input class="form-control" type="text" name="name" placeholder="Full Name"
+                                                required>
+                                            <div class="valid-feedback">Username field is valid!</div>
+                                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <input class="form-control" type="email" name="email"
+                                                placeholder="E-mail Address" required>
+                                            <div class="valid-feedback">Email field is valid!</div>
+                                            <div class="invalid-feedback">Email field cannot be blank!</div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-12">
+                                            <input class="form-control" type="text" name="password"
+                                                placeholder="Your Message" required>
+                                            <div class="valid-feedback">Text field is valid!</div>
+                                            <div class="invalid-feedback">Text field cannot be blank!</div>
+                                        </div>
+
+
+                                        <div class="col-md-12 mt-3">
+                                            <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                                            <input type="radio" class="btn-check" name="gender" id="male"
+                                                autocomplete="off" required>
+                                            <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                                            <input type="radio" class="btn-check" name="gender" id="female"
+                                                autocomplete="off" required>
+                                            <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+                                            <input type="radio" class="btn-check" name="gender" id="secret"
+                                                autocomplete="off" required>
+                                            <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                            <div class="valid-feedback mv-up">You selected a gender!</div>
+                                            <div class="invalid-feedback mv-up">Please select a gender!</div>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                                required>
+                                            <label class="form-check-label">I confirm that all data are correct</label>
+                                            <div class="invalid-feedback">Please confirm that the entered data are all
+                                                correct!</div>
+                                        </div>
+
+
+                                        <div class="form-button mt-3">
+                                            <button id="submit" type="submit" class="btn btn-primary">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    (function () {
+        'use strict'
+        const forms = document.querySelectorAll('.requires-validation')
+        Array.from(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+
+</script>
+
+</html>
